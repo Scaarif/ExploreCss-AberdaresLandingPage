@@ -1,0 +1,189 @@
+@import "import-styles.css"; /*imports styles.css to this file */
+
+* {
+    box-sizing: border-box; /* prevent the addition effect to height by paddings and margins - for an element*/
+}
+body {
+    font-family: 'Helvetica Neue' Arial, Helvetica, sans-serif;
+    /* margin: 0; */
+    font-size: 1em; /*16px*/
+    line-height: 1.5;
+}
+.primary-content, .main-header, #main-footer {
+    text-align: center;
+}
+.primary-content,
+.secondary-content {
+    width: 75%;
+    padding: 0 50px;
+    margin: auto;
+    max-width: 900px;
+}
+.primary-content {
+    margin-bottom: 20px;
+}
+p{
+    font-size: 20px;
+    /* font-weight: 300; lighter - bolder in numeric */
+}
+h1{
+    font-size: 50px;
+    /* color: firebrick; */
+    line-height: 1.2;
+    text-shadow: 0 1px 1px rgba(0,0,0,.8);
+    /* margin: 12px 0 0; */
+}
+h2 {
+    font-size: 30px;
+    color: #2a2f35;
+}
+h3 {
+    font-size: 25px;
+    color: #2a2f35;
+}
+h1, h2, h3 {
+    text-transform: capitalize;
+}
+/* header{
+    background-color: orange;
+    border-radius: 1rem;
+    padding: 1rem;
+} */
+.main-header {
+    padding: 1rem;
+    height: 350px;
+    background: linear-gradient(#434a52 , transparent 90%),
+                linear-gradient(0deg, #fff, transparent),
+                #434a52  url(../../../../Pictures/Downloads/willian-justen-de-vasconcellos-JuhxRDzAHok-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    color: white;
+}
+.title {
+    /* color: firebrick; */
+    font-size: 1.625em; /* 26px/16px */
+    letter-spacing: .065rem;
+    font-weight: 200;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+.arrow {
+    width: 50px;
+    margin-top: 150px;
+}
+.wildlife {
+    color: white;
+    text-align: left;
+    padding: 18% 24%;
+    border-top: 10px solid #ffa949;
+    margin: 105px 0 60px;
+    background:   linear-gradient(#434a52, transparent 90%),
+                #434a52 url('../../../../Pictures/Downloads/zdenek-machacek-hxXtAZXqGWs-unsplash.jpg') no-repeat center;
+    background-size: cover;
+    box-shadow: 0 0 50px 10px rgba(0,0,0,.8);
+    
+    border-radius: 25px 10px 25px 10px; /*top-right-bottom-left; same as 50px 10px*/
+}
+a:link {
+    color: rgb(178, 34, 34);
+}
+a:visited {
+    color: rgba(91, 18, 209, 0.5); /*include an alpha trait to make the color 50% transparent */
+}
+a:hover {
+    /* color: forestgreen; */
+    color: rgba(178, 34, 34,.5);
+}
+a:active {
+    color: lightcoral;
+}
+:focus { /*without a tag, this styling will apply to  all elements where it is applicable - in this case, form elements and links*/
+    color: white;
+    /* background: orange; */
+}
+ p a, ul a {  /* for links within p and ul tags */
+     text-decoration: none;
+}
+img {
+    max-width: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.img-height {
+    height: 20%;
+}
+/*=== Floated columns ===*/
+.resorts, .tips {
+    width: 46.5%;
+}
+.tips {
+    float: right;
+}
+.resorts {
+    float: left;
+}
+/* === Clear Fix ===  */ /*same effect as overflow: hidden */
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#main-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom:10px solid orange;
+    background: linear-gradient(180deg, #fff, transparent), #434a52;
+}
+#main-footer a {
+    color: white;
+}
+.t-border {
+    border-top: 2px solid lightgray;
+}
+@media (max-width: 1024px) {
+    .primary-content,
+    .secondary-content {
+        width: 90%;
+    }
+    .wildlife {
+        padding: 10% 12%;
+        margin: 50px 0 20px; /*top, left and right, bottom*/
+    }
+}
+@media (max-width: 768px)  {
+    .primary-content,
+    .secondary-content {
+        width: 100%;
+        padding: 20px;
+        border-top: none;
+    }
+    .main-header {
+        max-height: 380px;
+        padding: 50px 25px 0;
+    }
+    .title {
+        font-size: 1.3rem;
+        border: none;
+    }
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    .arrow {
+        display: none;
+    }
+    .resorts, .tips {
+        float: none;
+        width: 100%;
+    }
+    .main-footer {
+        padding: 20px 0;
+    }
+}
+
+/* display properties
+inline elements like links and spans -inline display
+block elements - elements taking their own lines eg p's, h1's, and div's
+inline-block - a combo of the two: will posses traits of both...
+say the margin top and bottom available to blocks would be available in an inline display behaviour
+*/
+/* ctr + foward slash - comments out stuff/ or uncomments */
